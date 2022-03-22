@@ -1,0 +1,13 @@
+### TEST SERVER
+GET http://127.0.0.1:3333/
+Content-Type: application/json
+
+### REGISTER USER
+POST http://127.0.0.1:3333/users
+Content-Type: application/json
+
+{
+    "username": "thalia",
+    "email": "thalialeticia1107@gmail.com",
+    "password": "thalia"
+}
