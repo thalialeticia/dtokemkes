@@ -46,4 +46,28 @@ export default class FaskesController {
             return response.status(500).json({ code: 500, status: 'error', message: err.message })
         }
     }
+    public async pdf({ response }: HttpContextContract) {
+        try {
+            const PDFDocument = require('pdfkit');
+            const fs = require('fs');
+        
+            const faskes = await Faske.all()
+
+            const doc = new PDFDocument();
+            doc.pipe(fs.createWriteStream('output.pdf'));
+            doc.text('Fasilitas Kesehatan').fontSize(10)
+            for (const faske of faskes) {
+                doc.text(`
+                ${faske.id}. Name: ${faske.name}
+                Type: ${faske.faskes_type}
+                Total Nakes: ${faske.total_nakes}
+                `).fontSize(10)
+                // console.log(faske.name)
+            }
+            doc.end()
+            return response.status(200).json({ code: 200, status: 'success', data: 'pdf output' })
+        } catch (err) {
+            return response.status(500).json({ code: 500, status: 'error', message: err.message })
+        }
+    }
 }

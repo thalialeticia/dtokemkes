@@ -283,4 +283,24 @@ _Response (200)_
   }
 }
 ```
+### GET /faskes/pdf
+_Request Header_
+```
+{
+    Authorization : <Bearer access_token>
+}
+```
 
+_Request Body_
+```
+not needed
+```
+
+_Response (200)_
+```
+{
+  "code": 200,
+  "status": "success",
+  "data": "pdf output"
+}
+```

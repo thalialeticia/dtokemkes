@@ -56,3 +56,8 @@ Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzp
 DELETE http://127.0.0.1:3333/faskes/5
 Content-Type: application/json
 Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
+
+### PDF FASKES
+GET http://127.0.0.1:3333/faskes/pdf
+Content-Type: application/json
+Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn

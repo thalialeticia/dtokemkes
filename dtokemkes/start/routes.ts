@@ -34,5 +34,6 @@ Route.group(() => {
     Route.get('/', 'FaskesController.read')
     Route.patch('/:id', 'FaskesController.edit')
     Route.delete('/:id', 'FaskesController.delete')
+    Route.get('/pdf', 'FaskesController.pdf')
   }).prefix('/faskes').middleware('auth')
 })
