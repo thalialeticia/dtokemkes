@@ -10,7 +10,7 @@ export default class UsersController {
             const user = await User.create(input)
             const token = await auth.use('api').attempt(input.email, input.password)
             console.log(user)
-            user.login = 'true'
+            user.is_login = 'true'
             await user.save()
             return response.status(200).json({ code: 201, status: 'success', data: {user, token} })
         } catch (err) {
@@ -23,7 +23,7 @@ export default class UsersController {
             let user = await User.findBy('email', input.email)
             if(user){
                 if (await Hash.verify(user.password, input.password)) {
-                    user.login = 'true'
+                    user.is_login = 'true'
                     await user.save()
                     const token = await auth.use('api').attempt(input.email, input.password)
 
@@ -38,12 +38,12 @@ export default class UsersController {
             return response.status(500).json({ code: 500, status: 'error', message: err.message })
         }
     }
-    public async logout({ request, response, auth }: HttpContextContract) {
+    public async logout({ response, auth }: HttpContextContract) {
         try {
             await auth.use('api').authenticate()
             let userId = auth.use('api').user!.id
             const user = await User.findOrFail(userId)
-            user.login = 'false'
+            user.is_login = 'false'
             await user.save()
             return response.status(200).json({ code: 200, status: 'success', data: user })
         } catch (err) {

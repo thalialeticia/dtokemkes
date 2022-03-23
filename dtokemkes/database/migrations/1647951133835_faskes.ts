@@ -7,8 +7,8 @@ export default class Faskes extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
       table.string('name').notNullable()
-      table.string('faskesType').notNullable()
-      table.integer('totalNakes').notNullable()
+      table.enum('faskes_type', ['RS', 'Puskesmas', 'Posyandu', 'Klinik']).notNullable()
+      table.integer('total_nakes').notNullable()
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })

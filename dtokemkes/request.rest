@@ -24,4 +24,20 @@ Content-Type: application/json
 ### LOGOUT USER
 PATCH http://127.0.0.1:3333/logout
 Content-Type: application/json
-Authorization: Bearer Y2wxMzVha2o5MDAwMW11eG80M3VvMHl3ag.wiVRQk5ThGnTrLjwA8ZyJjGznOCyLqjIfQqF6f495IMxyf9IfXQo1v6nF55y
+Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
+
+### CREATE FASKES
+POST http://127.0.0.1:3333/faskes/
+Content-Type: application/json
+Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
+
+{
+    "name": "Awal Bros",
+    "faskes_type": "Puskesmas",
+    "total_nakes": 5
+}
+
+### READ FASKES
+GET http://127.0.0.1:3333/faskes
+Content-Type: application/json
+Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn

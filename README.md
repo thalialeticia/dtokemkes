@@ -63,7 +63,7 @@ _Response (404 - Not Found)_
 ### POST /register
 _Request Header_
 ```
-nod needed
+not needed
 ```
 
 _Request Body_

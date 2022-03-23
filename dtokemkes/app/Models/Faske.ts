@@ -9,10 +9,10 @@ export default class Faske extends BaseModel {
   public name: string
 
   @column()
-  public faskesType: string
+  public faskes_type: ('RS' | 'Puskesmas' | 'Posyandu' | 'Klinik' )[]
 
   @column()
-  public totalNakes: number
+  public total_nakes: number
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

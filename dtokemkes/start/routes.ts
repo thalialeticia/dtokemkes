@@ -29,4 +29,10 @@ Route.group(() => {
   Route.post('/login', 'UsersController.login')
   Route.patch('/logout', 'UsersController.logout').middleware('auth')
   
+  Route.group(() => {
+    Route.post('/', 'FaskesController.create')
+    Route.get('/', 'FaskesController.read')
+    Route.patch('/:id', 'FaskesController.edit')
+    Route.delete('/:id', 'FaskesController.delete')
+  }).prefix('/faskes').middleware('auth')
 })
