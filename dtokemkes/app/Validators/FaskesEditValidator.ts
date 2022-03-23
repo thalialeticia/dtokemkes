@@ -1,12 +1,8 @@
 import { schema, rules } from '@ioc:Adonis/Core/Validator'
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import BaseValidator from './BaseValidator'
 
-export default class FaskeValidator extends BaseValidator {
-  constructor(protected ctx: HttpContextContract) {
-    super()
-
-  }
+export default class FaskesEditValidator {
+  constructor(protected ctx: HttpContextContract) {}
 
   /*
    * Define schema to validate the "shape", "type", "formatting" and "integrity" of data.
@@ -28,10 +24,10 @@ export default class FaskeValidator extends BaseValidator {
    *    ```
    */
   public schema = schema.create({
-    name: schema.string({trim: true}, [
+    name: schema.string.optional({trim: true}, [
       rules.minLength(1),
     ]),
-    faskes_type: schema.enum([
+    faskes_type: schema.enum.optional([
       'RS', 
       'Puskesmas',
       'Posyandu',
@@ -53,4 +49,5 @@ export default class FaskeValidator extends BaseValidator {
    * }
    *
    */
+  public messages = {}
 }

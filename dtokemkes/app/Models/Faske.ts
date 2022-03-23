@@ -9,7 +9,7 @@ export default class Faske extends BaseModel {
   public name: string
 
   @column()
-  public faskes_type: ('RS' | 'Puskesmas' | 'Posyandu' | 'Klinik' )[]
+  public faskes_type: ('RS' | 'Puskesmas' | 'Posyandu' | 'Klinik' )
 
   @column()
   public total_nakes: number

@@ -29,15 +29,30 @@ Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzp
 ### CREATE FASKES
 POST http://127.0.0.1:3333/faskes/
 Content-Type: application/json
-Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
+Authorization: Bearer Y2wxM2kxdDJvMDAwMHpoeG9mMGhvODdybQ.0cfVuHiTO8QDpq8zS7OiqmlzD3N_RnF9bMOMlTbgT528pQDjzTLbRys_QObk
 
 {
-    "name": "Awal Bros",
+    "name": "PKC Penjaringan",
     "faskes_type": "Puskesmas",
-    "total_nakes": 5
+    "total_nakes": 0
 }
 
 ### READ FASKES
 GET http://127.0.0.1:3333/faskes
+Content-Type: application/json
+Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
+
+### EDIT FASKES
+PATCH http://127.0.0.1:3333/faskes/1
+Content-Type: application/json
+Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
+
+{
+
+    "total_nakes": 50
+}
+
+### DELETE FASKES 
+DELETE http://127.0.0.1:3333/faskes/5
 Content-Type: application/json
 Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn

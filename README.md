@@ -151,3 +151,136 @@ _Response (200)_
   }
 }
 ```
+### POST /faskes
+_Request Header_
+```
+{
+    Authorization : <Bearer access_token>
+}
+```
+
+_Request Body_
+```
+{
+    name,
+    faskes_type,
+    total_nakes
+}
+```
+
+_Response (201)_
+```
+{
+  "code": 201,
+  "status": "success",
+  "data": {
+    "faskes": {
+      "name": "Awal Bros",
+      "faskes_type": "Puskesmas",
+      "total_nakes": 5,
+      "created_at": "2022-03-23T18:40:51.542+07:00",
+      "updated_at": "2022-03-23T18:40:51.542+07:00",
+      "id": 8
+    }
+  }
+}
+```
+### GET /faskes
+_Request Header_
+```
+{
+    Authorization : <Bearer access_token>
+}
+```
+
+_Request Body_
+```
+not needed
+```
+
+_Response (200)_
+```
+{
+  "code": 200,
+  "status": "success",
+  "data": [
+    {
+      "id": 2,
+      "name": "PKC Penjaringan",
+      "faskes_type": "Puskesmas",
+      "total_nakes": 20,
+      "created_at": "2022-03-23T18:48:05.371+07:00",
+      "updated_at": "2022-03-23T18:48:05.371+07:00"
+    },
+    {
+      "id": 1,
+      "name": "Awal Bros",
+      "faskes_type": "RS",
+      "total_nakes": 30,
+      "created_at": "2022-03-23T18:46:03.232+07:00",
+      "updated_at": "2022-03-23T18:46:03.233+07:00"
+    }
+  ]
+}
+```
+### PATCH /faskes/:id
+_Request Header_
+```
+{
+    Authorization : <Bearer access_token>
+}
+```
+
+_Request Body_
+```
+{
+    name (optional),
+    faskes_type (optional),
+    total_nakes (required)
+}
+```
+
+_Response (200)_
+```
+{
+  "code": 200,
+  "status": "success",
+  "data": {
+    "id": 1,
+    "name": "Awal Bros",
+    "faskes_type": "RS",
+    "total_nakes": 50,
+    "created_at": "2022-03-23T18:46:03.232+07:00",
+    "updated_at": "2022-03-23T19:03:26.052+07:00"
+  }
+}
+```
+### DELETE /faskes/:id
+_Request Header_
+```
+{
+    Authorization : <Bearer access_token>
+}
+```
+
+_Request Body_
+```
+not needed
+```
+
+_Response (200)_
+```
+{
+  "code": 200,
+  "status": "success",
+  "data": {
+    "id": 5,
+    "name": "PKC Penjaringan",
+    "faskes_type": "Puskesmas",
+    "total_nakes": 0,
+    "created_at": "2022-03-23T18:58:46.428+07:00",
+    "updated_at": "2022-03-23T18:58:46.428+07:00"
+  }
+}
+```
+
