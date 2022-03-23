@@ -51,7 +51,7 @@ export default class FaskesController {
             const PDFDocument = require('pdfkit');
             const fs = require('fs');
         
-            const faskes = await Faske.all()
+            const faskes = await Faske.all() 
 
             const doc = new PDFDocument();
             doc.pipe(fs.createWriteStream('output.pdf'));
