@@ -27,4 +27,6 @@ Route.get('/', async () => {
 Route.group(() => {
   Route.post('/register', 'UsersController.register')
   Route.post('/login', 'UsersController.login')
-}).prefix('/users')
+  Route.patch('/logout', 'UsersController.logout').middleware('auth')
+  
+})

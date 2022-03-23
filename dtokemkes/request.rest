@@ -3,20 +3,25 @@ GET http://127.0.0.1:3333/
 Content-Type: application/json
 
 ### REGISTER USER
-POST http://127.0.0.1:3333/users/register
+POST http://127.0.0.1:3333/register
 Content-Type: application/json
 
 {
-    "username": "",
-    "email": "hdahd",
+    "username": "thalia",
+    "email": "thalialeticia1107@gmail.com",
     "password": "thalia"
 }
 
 ### LOGIN USER
-POST http://127.0.0.1:3333/users/login
+POST http://127.0.0.1:3333/login
 Content-Type: application/json
 
 {
     "email": "thalialeticia1107@gmail.com",
     "password": "thalia"
 }
+
+### LOGOUT USER
+PATCH http://127.0.0.1:3333/logout
+Content-Type: application/json
+Authorization: Bearer Y2wxMzVha2o5MDAwMW11eG80M3VvMHl3ag.wiVRQk5ThGnTrLjwA8ZyJjGznOCyLqjIfQqF6f495IMxyf9IfXQo1v6nF55y
