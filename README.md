@@ -60,7 +60,7 @@ _Response (404 - Not Found)_
 ```
 
 ## RESTful endpoints
-### POST /register
+### POST https://dtokemkesproject.herokuapp.com//register
 _Request Header_
 ```
 not needed
@@ -97,7 +97,7 @@ _Response (201)_
   }
 }
 ```
-### POST /login
+### POST https://dtokemkesproject.herokuapp.com//login
 _Request Header_
 ```
 not needed
@@ -122,7 +122,7 @@ _Response (200)_
   }
 }
 ```
-### POST /logout
+### POST https://dtokemkesproject.herokuapp.com//logout
 _Request Header_
 ```
 {
@@ -151,7 +151,7 @@ _Response (200)_
   }
 }
 ```
-### POST /faskes
+### POST https://dtokemkesproject.herokuapp.com//faskes
 _Request Header_
 ```
 {
@@ -185,7 +185,7 @@ _Response (201)_
   }
 }
 ```
-### GET /faskes
+### GET https://dtokemkesproject.herokuapp.com//faskes
 _Request Header_
 ```
 {
@@ -223,7 +223,7 @@ _Response (200)_
   ]
 }
 ```
-### PATCH /faskes/:id
+### PATCH https://dtokemkesproject.herokuapp.com//faskes/:id
 _Request Header_
 ```
 {
@@ -255,7 +255,7 @@ _Response (200)_
   }
 }
 ```
-### DELETE /faskes/:id
+### DELETE https://dtokemkesproject.herokuapp.com//faskes/:id
 _Request Header_
 ```
 {
@@ -283,7 +283,7 @@ _Response (200)_
   }
 }
 ```
-### GET /faskes/pdf
+### GET https://dtokemkesproject.herokuapp.com//faskes/pdf
 _Request Header_
 ```
 {
