@@ -14,6 +14,7 @@ export default class UsersController {
             await user.save()
             return response.status(200).json({ code: 201, status: 'success', data: {user, token} })
         } catch (err) {
+            // console.log(err.message)
             return response.status(500).json({ code: 500, status: 'error', message: err.message })
         }
     }

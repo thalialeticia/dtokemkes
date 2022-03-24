@@ -1,19 +1,20 @@
 ### TEST SERVER
-GET http://127.0.0.1:3333/
+GET https://dtokemkesproject.herokuapp.com/
 Content-Type: application/json
 
 ### REGISTER USER
+# POST https://dtokemkesproject.herokuapp.com/register
 POST http://127.0.0.1:3333/register
 Content-Type: application/json
 
 {
-    "username": "thalia",
-    "email": "thalialeticia1107@gmail.com",
-    "password": "thalia"
+    "username": "thaliaaaaaaaa",
+    "email": "thaliafajnfkajnfkjanfjkaticia1107a@gmail.com",
+    "password": "thalaaia"
 }
 
 ### LOGIN USER
-POST http://127.0.0.1:3333/login
+POST https://dtokemkesproject.herokuapp.com/login
 Content-Type: application/json
 
 {
@@ -22,12 +23,12 @@ Content-Type: application/json
 }
 
 ### LOGOUT USER
-PATCH http://127.0.0.1:3333/logout
+PATCH https://dtokemkesproject.herokuapp.com/logout
 Content-Type: application/json
 Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
 
 ### CREATE FASKES
-POST http://127.0.0.1:3333/faskes/
+POST https://dtokemkesproject.herokuapp.com/faskes/
 Content-Type: application/json
 Authorization: Bearer Y2wxM2kxdDJvMDAwMHpoeG9mMGhvODdybQ.0cfVuHiTO8QDpq8zS7OiqmlzD3N_RnF9bMOMlTbgT528pQDjzTLbRys_QObk
 
@@ -38,12 +39,12 @@ Authorization: Bearer Y2wxM2kxdDJvMDAwMHpoeG9mMGhvODdybQ.0cfVuHiTO8QDpq8zS7Oiqml
 }
 
 ### READ FASKES
-GET http://127.0.0.1:3333/faskes
+GET https://dtokemkesproject.herokuapp.com/faskes
 Content-Type: application/json
 Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
 
 ### EDIT FASKES
-PATCH http://127.0.0.1:3333/faskes/1
+PATCH https://dtokemkesproject.herokuapp.com/faskes/1
 Content-Type: application/json
 Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
 
@@ -53,11 +54,11 @@ Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzp
 }
 
 ### DELETE FASKES 
-DELETE http://127.0.0.1:3333/faskes/5
+DELETE https://dtokemkesproject.herokuapp.com/faskes/5
 Content-Type: application/json
 Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
 
 ### PDF FASKES
-GET http://127.0.0.1:3333/faskes/pdf
+GET https://dtokemkesproject.herokuapp.com/faskes/pdf
 Content-Type: application/json
 Authorization: Bearer Y2wxM2M5dTBkMDAwMG8zeG9idzZlOWZmbA.HAtD6T77cBRRemYkrf9DKzpiUOcMmSjUyz-YoWC1ZSC0r28abx8yD9LMqUFn
