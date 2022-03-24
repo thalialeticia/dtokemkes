@@ -3,8 +3,8 @@ GET https://dtokemkesproject.herokuapp.com/
 Content-Type: application/json
 
 ### REGISTER USER
-# POST https://dtokemkesproject.herokuapp.com/register
-POST http://127.0.0.1:3333/register
+POST https://dtokemkesproject.herokuapp.com/register
+# POST http://127.0.0.1:3333/register
 Content-Type: application/json
 
 {
